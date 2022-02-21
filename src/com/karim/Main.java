@@ -47,12 +47,23 @@ public class Main {
             }
             System.out.println();
         }
+        int countOfEven = 0;
+        for (int u=0; u < evenNums.length;u++){
+            if(evenNums[u]%2==0) countOfEven++;
+        }
+        int[] mas2 = new int[countOfEven];
         System.out.println("Массив из четных чисел");
+        int o = 0;
         for (int u=0; u < evenNums.length;u++){
             if(evenNums[u]%2==0){
-                System.out.print(evenNums[u]+" ");
+                mas2[o] = evenNums[u];
+                o++;
             }
+        }
+        for(int i = 0;i<mas2.length;i++){
+            System.out.print(mas2[i]+" ");
         }
 
     }
+
 }
